@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "yodacheck"
-version = "0.1.1"
+version = "0.1.2"
 description = "Detect and auto-fix Yoda conditions in Python source files"
 authors = [{ name = "SytxLabs" }]
 readme = "README.md"
@@ -26,6 +26,5 @@ classifiers = [
 [project.scripts]
 yodacheck = "yodacheck:main"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["yodacheck*"]
+[tool.setuptools]
+py-modules = ["yodacheck"]
