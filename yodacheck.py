@@ -9,8 +9,6 @@ Usage:
     python yodacheck.py <path> [<path> ...] [--fix] [--context N] [--format pretty|plain|json]
 """
 
-from __future__ import annotations
-
 import argparse
 import ast
 import json
