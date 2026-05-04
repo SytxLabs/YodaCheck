@@ -30,10 +30,18 @@ if flag is True: ...
 ## Installation
 
 ```bash
-pip install .
+pip install yodacheck
 ```
 
-After install the `yodacheck` command is available globally. Without installing, use `python yodacheck.py` directly.
+After install the `yodacheck` command is available globally.
+
+Or install from source:
+
+```bash
+git clone https://github.com/SytxLabs/yodacheck.git
+cd yodacheck
+pip install .
+```
 
 ## Usage
 
@@ -46,7 +54,7 @@ yodacheck src/
 yodacheck src/ tests/ setup.py
 
 # Show N context lines per issue
-yodacheck src/ --context 2
+yodacheck src/ --context 1
 
 # Auto-fix (creates .bak backup first)
 yodacheck src/ --fix
@@ -74,7 +82,7 @@ yodacheck src/ --no-color
   99:3   1 < retry_count < 5    ⚠ chained, no fix
 ```
 
-With `--context 2`:
+With `--context 1`:
 
 ```
   42:3   None == token  →  token is None  [is None]

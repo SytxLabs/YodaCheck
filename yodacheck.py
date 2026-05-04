@@ -124,6 +124,7 @@ def _c(text: str, style: str, on: bool) -> str:
 
 def _snippet(lines: list[str], lineno: int, col: int, ctx: int, color: bool) -> str:
     """Render *ctx* context lines around *lineno* with a caret at *col*."""
+    ctx += 1
     lo = max(1, lineno - ctx)
     hi = min(len(lines), lineno + ctx)
     out: list[str] = []
